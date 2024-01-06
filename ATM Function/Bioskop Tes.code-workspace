@@ -1,0 +1,35 @@
+{
+	"folders": [
+		{
+			"path": "../Bioskop Tes"
+		},
+		{
+			"path": "../ATM sederhana"
+		},
+		{
+			"path": "../../../../Tugas Kuliah/Praktikum/Tugas Random Ornag/TOT ID"
+		},
+		{
+			"path": "../Tiket Pesawat"
+		},
+		{
+			"path": "../../../../Tugas Kuliah/Praktikum/Tugas Random Ornag/AgumgBug"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../../Tugas Kuliah/Praktikum/Tugas Random Ornag/Tiket.ID-main"
+		},
+		{
+			"path": "../../../../Tugas Kuliah/Praktikum/Tugas Random Ornag/Tiket.ID-dev"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"iostream": "cpp",
+			"xstring": "cpp",
+			"ostream": "cpp"
+		}
+	}
+}
