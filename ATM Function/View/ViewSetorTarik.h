@@ -4,9 +4,9 @@
 
 using namespace std;
 
-void vTarikTunai50(string inpNoRek)
+void vTarikTunai50(string inpNoRek, string inpNoPin)
 {
-    mTarikTunai50(inpNoRek);
+    mTarikTunai50(inpNoRek, inpNoPin);
 }
 
 void vTarikTunai100(string inpNoRek)

@@ -41,12 +41,12 @@ int mSearchAkun(string inpNoRek)
     return -1;
 }
 
-int mCekLogin(string inpNoRek, string inpNoPin)
+int mCekLogin(string inpNoRek, string inpNoPin, int inpPinSalah)
 {
 
     for (int i = 0; i < nAkun; i++)
     {
-        if (noRek[i] == inpNoRek && noPin[i] == inpNoPin)
+        if (noRek[i] == inpNoRek && noPin[i] == inpNoPin && pinSalah[i] == inpPinSalah)
         {
             return i;
         }

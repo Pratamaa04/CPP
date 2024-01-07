@@ -3,9 +3,9 @@
 
 using namespace std;
 
-void mTarikTunai50(string inpNoRek)
+void mTarikTunai50(string inpNoRek, string inpNoPin)
 {
-
+    int konfirmasi = 0, piliahan = 9, inpPinSalah;
     int indexTarik = mSearchAkun(inpNoRek);
     if (indexTarik != -1)
     {
@@ -13,22 +13,40 @@ void mTarikTunai50(string inpNoRek)
         int pecahan50 = 0;
         cout << "Masukkan Saldo Yang akan anda ambil : " << endl;
         cin >> tarikSaldo;
-        if (saldoAkun[indexTarik] >= tarikSaldo && tarikSaldo <= 50000)
+        while (konfirmasi < 3)
         {
-            if (tarikSaldo % 50000 == 0)
+            cout << "Masukkan Pin Anda :" << endl;
+            cin >> inpNoPin;
+            if (inpNoPin == noPin[indexTarik])
             {
-                saldoAkun[indexTarik] = saldoAkun[indexTarik] - tarikSaldo;
-                pecahan50 = tarikSaldo / 50000;
-                cout << "anda mendapatkan pecahan 50000 sebanyak " << pecahan50 << "x" << endl;
+                if (saldoAkun[indexTarik] >= tarikSaldo && tarikSaldo <= 50000)
+                {
+                    if (tarikSaldo % 50000 == 0)
+                    {
+                        saldoAkun[indexTarik] = saldoAkun[indexTarik] - tarikSaldo;
+                        pecahan50 = tarikSaldo / 50000;
+                        cout << "anda mendapatkan pecahan 50000 sebanyak " << pecahan50 << "x" << endl;
+                    }
+                    else
+                    {
+                        cout << "Pengambilan Dana minimal menggunakan pecahan 50000" << endl;
+                    }
+                }
+                else
+                {
+                    cout << "Saldo Anda Kurang" << endl;
+                }
             }
             else
             {
-                cout << "Pengambilan Dana minimal menggunakan pecahan 50000" << endl;
+                konfirmasi++;
+                if (konfirmasi == 3)
+                {
+                    cout << "REKENING ANDA TELAH DI BLOKIR" << endl;
+                    inpPinSalah = 3;
+                    inpPinSalah = pinSalah[indexTarik];
+                }
             }
-        }
-        else
-        {
-            cout << "Saldo Anda Kurang" << endl;
         }
     }
 }

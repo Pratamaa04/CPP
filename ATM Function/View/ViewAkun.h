@@ -49,3 +49,4 @@ void vInfoSaldo(string inpNoRek)
         cout << "Sisa Saldo anda adalah :" << saldoAkun[indexSaldo] << endl;
     }
 }
+
